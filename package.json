@@ -1,0 +1,17 @@
+{
+  "name": "Algorithms-and-Data-Structures-Javascipt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sorting": "nodemon ./sorting/index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.6"
+  }
+}
