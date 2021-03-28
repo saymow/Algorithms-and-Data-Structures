@@ -14,5 +14,7 @@ class Main {
       System.out.print("Do you wanna add more numbers (Y/N):");
       finished = console.nextLine().toLowerCase().charAt(0) == 'n';
     } while (!finished);
+
+    singlyLinkedList.pop();
   }
 }

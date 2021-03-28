@@ -22,4 +22,17 @@ class SinglyLinkedList {
       this.lastNode = newNode;
     }
   }
+
+  public void pop() {
+    this.tmpNode = this.initialNode;
+
+    while (this.tmpNode.next != null) {
+      if (this.tmpNode.next.next == null) {
+        this.tmpNode.next = null;
+        this.lastNode = this.tmpNode;
+      } else {
+        this.tmpNode = this.tmpNode.next;
+      }
+    }
+  }
 }
