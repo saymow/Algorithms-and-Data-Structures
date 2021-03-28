@@ -35,4 +35,13 @@ class SinglyLinkedList {
       }
     }
   }
+
+  public void list() {
+    this.tmpNode = this.initialNode;
+
+    while (this.tmpNode != null) {
+      System.out.printf("%d  ", tmpNode.number);
+      this.tmpNode = this.tmpNode.next;
+    }
+  }
 }

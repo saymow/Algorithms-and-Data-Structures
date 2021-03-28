@@ -16,5 +16,6 @@ class Main {
     } while (!finished);
 
     singlyLinkedList.pop();
+    singlyLinkedList.list();
   }
 }
