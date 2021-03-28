@@ -44,4 +44,15 @@ class SinglyLinkedList {
       this.tmpNode = this.tmpNode.next;
     }
   }
+
+  public boolean includes(int number) {
+    this.tmpNode = this.initialNode;
+
+    while (this.tmpNode != null) {
+      if (this.tmpNode.number == number) return true;
+      this.tmpNode = this.tmpNode.next;
+    }
+
+    return false;
+  }
 }

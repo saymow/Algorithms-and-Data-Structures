@@ -17,5 +17,9 @@ class Main {
 
     singlyLinkedList.pop();
     singlyLinkedList.list();
+
+    System.out.println(
+      "Does it includes 3? " + (singlyLinkedList.includes(3) ? "yep" : "no")
+    );
   }
 }
