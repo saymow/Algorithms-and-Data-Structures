@@ -46,6 +46,8 @@ class Main {
           }
         case 4:
           {
+            singlyLinkedList.shift();
+            System.out.println("Element shifted.");
             break;
           }
         case 5:
@@ -66,7 +68,7 @@ class Main {
           }
         case 7:
           {
-            System.out.println("Current elements.");
+            System.out.print("Current elements: ");
             singlyLinkedList.list();
             break;
           }

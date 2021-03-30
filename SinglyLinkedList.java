@@ -25,14 +25,21 @@ class SinglyLinkedList {
 
   public void pop() {
     this.tmpNode = this.initialNode;
+    Node previousNode = this.tmpNode;
 
-    while (this.tmpNode.next != null) {
-      if (this.tmpNode.next.next == null) {
-        this.tmpNode.next = null;
-        this.lastNode = this.tmpNode;
-      } else {
-        this.tmpNode = this.tmpNode.next;
+    while (this.tmpNode != null) {
+      if (this.tmpNode.next == null) {
+        if (this.tmpNode == this.initialNode) {
+          this.initialNode = null;
+          this.lastNode = null;
+        } else {
+          previousNode.next = null;
+          this.lastNode = previousNode;
+        }
       }
+
+      previousNode = this.tmpNode;
+      this.tmpNode = this.tmpNode.next;
     }
   }
 
@@ -48,6 +55,12 @@ class SinglyLinkedList {
 
       newNode.next = this.initialNode;
       this.initialNode = newNode;
+    }
+  }
+
+  public void shift() {
+    if (this.initialNode != null) {
+      this.initialNode = this.initialNode.next;
     }
   }
 
