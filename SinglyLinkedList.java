@@ -36,6 +36,21 @@ class SinglyLinkedList {
     }
   }
 
+  public void unshift(int number) {
+    if (this.initialNode == null && this.lastNode == null) {
+      this.lastNode = new Node();
+      this.initialNode = this.lastNode;
+
+      this.lastNode.number = number;
+    } else {
+      Node newNode = new Node();
+      newNode.number = number;
+
+      newNode.next = this.initialNode;
+      this.initialNode = newNode;
+    }
+  }
+
   public void list() {
     this.tmpNode = this.initialNode;
 
