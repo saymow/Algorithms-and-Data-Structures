@@ -72,6 +72,7 @@ class Main {
             singlyLinkedList.list();
             break;
           }
+        default:
       }
 
       System.out.print("\n\n\n");
