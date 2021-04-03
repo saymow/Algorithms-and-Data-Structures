@@ -100,6 +100,11 @@ class DoublyLinkedList {
     }
   }
 
+  public void clear() {
+    this.initialNode = null;
+    this.finalNode = null;
+  }
+
   public boolean includes(int number) {
     DoublyLinkedListNode tmp = this.initialNode;
 

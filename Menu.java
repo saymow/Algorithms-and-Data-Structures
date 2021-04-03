@@ -166,8 +166,8 @@ public class Menu {
           }
         case 9:
           {
-            // System.out.println("Elements cleared.");
-            // doublyLinkedList.clear();
+            System.out.println("Elements cleared.");
+            doublyLinkedList.clear();
           }
         default:
       }
