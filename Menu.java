@@ -128,9 +128,9 @@ public class Menu {
           }
         case 3:
           {
-            // System.out.print("Type a number: ");
-            // doublyLinkedList.unshift(Integer.parseInt(console.nextLine()));
-            // System.out.println("Element unshifted.");
+            System.out.print("Type a number: ");
+            doublyLinkedList.unshift(Integer.parseInt(console.nextLine()));
+            System.out.println("Element unshifted.");
             break;
           }
         case 4:

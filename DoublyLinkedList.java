@@ -44,6 +44,20 @@ class DoublyLinkedList {
     }
   }
 
+  public void unshift(int number) {
+    DoublyLinkedListNode newNode = new DoublyLinkedListNode();
+    newNode.number = number;
+
+    if (this.initialNode == null) {
+      this.initialNode = newNode;
+      this.finalNode = newNode;
+    } else {
+      this.initialNode.previous = newNode;
+      newNode.next = this.initialNode;
+      this.initialNode = newNode;
+    }
+  }
+
   public void list() {
     DoublyLinkedListNode tmp = this.initialNode;
 
