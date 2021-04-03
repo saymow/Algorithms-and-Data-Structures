@@ -1,23 +1,23 @@
-class Node {
+class SinglyLinkedListNode {
 
   int number;
-  Node next;
+  SinglyLinkedListNode next;
 }
 
 class SinglyLinkedList {
 
-  Node initialNode;
-  Node lastNode;
-  Node tmpNode;
+  SinglyLinkedListNode initialNode;
+  SinglyLinkedListNode lastNode;
+  SinglyLinkedListNode tmpNode;
 
   public void push(int number) {
     if (this.initialNode == null && this.lastNode == null) {
-      this.lastNode = new Node();
+      this.lastNode = new SinglyLinkedListNode();
       this.initialNode = this.lastNode;
 
       this.lastNode.number = number;
     } else {
-      Node newNode = new Node();
+      SinglyLinkedListNode newNode = new SinglyLinkedListNode();
       newNode.number = number;
 
       this.lastNode.next = newNode;
@@ -27,7 +27,7 @@ class SinglyLinkedList {
 
   public void pop() {
     this.tmpNode = this.initialNode;
-    Node previousNode = this.tmpNode;
+    SinglyLinkedListNode previousNode = this.tmpNode;
 
     while (this.tmpNode != null) {
       if (this.tmpNode.next == null) {
@@ -47,12 +47,12 @@ class SinglyLinkedList {
 
   public void unshift(int number) {
     if (this.initialNode == null && this.lastNode == null) {
-      this.lastNode = new Node();
+      this.lastNode = new SinglyLinkedListNode();
       this.initialNode = this.lastNode;
 
       this.lastNode.number = number;
     } else {
-      Node newNode = new Node();
+      SinglyLinkedListNode newNode = new SinglyLinkedListNode();
       newNode.number = number;
 
       newNode.next = this.initialNode;
@@ -73,7 +73,7 @@ class SinglyLinkedList {
     while (this.tmpNode != null) {
       currentPos++;
       if (currentPos == position - 1) {
-        Node newNode = new Node();
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode();
         newNode.number = number;
         newNode.next = this.tmpNode.next;
 
@@ -81,7 +81,7 @@ class SinglyLinkedList {
 
         break;
       } else if (position == 1) {
-        Node newNode = new Node();
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode();
         newNode.number = number;
         newNode.next = this.tmpNode;
 
@@ -94,11 +94,7 @@ class SinglyLinkedList {
     }
 
     if (position > 0 && position <= currentPos) {
-      System.out.printf(
-        "%d inserted on position %d successfully.\n",
-        number,
-        position
-      );
+      System.out.printf("%d inserted on position %d successfully.\n", number, position);
     } else {
       System.out.printf("Position %d is out of bounds.\n", position);
     }
