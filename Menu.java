@@ -122,15 +122,15 @@ public class Menu {
           }
         case 2:
           {
-            // doublyLinkedList.pop();
-            // System.out.println("Element popped.");
+            doublyLinkedList.pop();
+            System.out.println("Element popped.");
             break;
           }
         case 3:
           {
             // System.out.print("Type a number: ");
             // doublyLinkedList.unshift(Integer.parseInt(console.nextLine()));
-            System.out.println("Element unshifted.");
+            // System.out.println("Element unshifted.");
             break;
           }
         case 4:

@@ -24,6 +24,26 @@ class DoublyLinkedList {
     }
   }
 
+  public void pop() {
+    DoublyLinkedListNode tmp = this.initialNode;
+    DoublyLinkedListNode previousNode = tmp;
+
+    while (tmp != null) {
+      if (tmp.next == null) {
+        if (tmp == this.initialNode) {
+          this.initialNode = null;
+          this.finalNode = null;
+        } else {
+          previousNode.next = null;
+          this.finalNode = previousNode;
+        }
+      }
+
+      previousNode = tmp;
+      tmp = tmp.next;
+    }
+  }
+
   public void list() {
     DoublyLinkedListNode tmp = this.initialNode;
 
