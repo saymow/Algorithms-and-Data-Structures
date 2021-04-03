@@ -160,8 +160,8 @@ public class Menu {
           }
         case 8:
           {
-            // System.out.print("Current elements: ");
-            // doublyLinkedList.list();
+            System.out.print("Current elements: ");
+            doublyLinkedList.list();
             break;
           }
         case 9:

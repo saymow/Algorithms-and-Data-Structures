@@ -23,4 +23,13 @@ class DoublyLinkedList {
       this.finalNode = newNode;
     }
   }
+
+  public void list() {
+    DoublyLinkedListNode tmp = this.initialNode;
+
+    while (tmp != null) {
+      System.out.printf("%d   ", tmp.number);
+      tmp = tmp.next;
+    }
+  }
 }
