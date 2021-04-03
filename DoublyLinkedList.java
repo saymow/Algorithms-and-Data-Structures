@@ -58,6 +58,39 @@ class DoublyLinkedList {
     }
   }
 
+  public void insert(int position, int number) {
+    DoublyLinkedListNode tmp = this.initialNode;
+    DoublyLinkedListNode newNode = new DoublyLinkedListNode();
+    int currentPos = 0;
+    newNode.number = number;
+
+    while (tmp != null) {
+      currentPos++;
+      if (position == 1) {
+        newNode.next = this.initialNode;
+        this.initialNode.previous = newNode;
+        this.initialNode = newNode;
+        break;
+      } else if (currentPos == position - 1) {
+        newNode.next = tmp.next;
+        newNode.previous = tmp;
+        tmp.next = newNode;
+        if (newNode.next != null) {
+          newNode.next.previous = newNode;
+        }
+        break;
+      }
+
+      tmp = tmp.next;
+    }
+
+    if (position > 0 && position <= currentPos) {
+      System.out.printf("%d inserted on position %d successfully.\n", number, position);
+    } else {
+      System.out.printf("Position %d is out of bounds.\n", position);
+    }
+  }
+
   public void list() {
     DoublyLinkedListNode tmp = this.initialNode;
 

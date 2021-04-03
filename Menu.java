@@ -141,11 +141,11 @@ public class Menu {
           }
         case 5:
           {
-            // System.out.print("Type a position: ");
-            // int pos = Integer.parseInt(console.nextLine());
-            // System.out.print("Type a number: ");
-            // int number = Integer.parseInt(console.nextLine());
-            // doublyLinkedList.insert(pos, number);
+            System.out.print("Type a position: ");
+            int pos = Integer.parseInt(console.nextLine());
+            System.out.print("Type a number: ");
+            int number = Integer.parseInt(console.nextLine());
+            doublyLinkedList.insert(pos, number);
             break;
           }
         case 6:
