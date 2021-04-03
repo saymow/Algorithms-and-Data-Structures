@@ -7,21 +7,21 @@ class SinglyLinkedListNode {
 class SinglyLinkedList {
 
   SinglyLinkedListNode initialNode;
-  SinglyLinkedListNode lastNode;
+  SinglyLinkedListNode finalNode;
   SinglyLinkedListNode tmpNode;
 
   public void push(int number) {
-    if (this.initialNode == null && this.lastNode == null) {
-      this.lastNode = new SinglyLinkedListNode();
-      this.initialNode = this.lastNode;
+    if (this.initialNode == null && this.finalNode == null) {
+      this.finalNode = new SinglyLinkedListNode();
+      this.initialNode = this.finalNode;
 
-      this.lastNode.number = number;
+      this.finalNode.number = number;
     } else {
       SinglyLinkedListNode newNode = new SinglyLinkedListNode();
       newNode.number = number;
 
-      this.lastNode.next = newNode;
-      this.lastNode = newNode;
+      this.finalNode.next = newNode;
+      this.finalNode = newNode;
     }
   }
 
@@ -33,10 +33,10 @@ class SinglyLinkedList {
       if (this.tmpNode.next == null) {
         if (this.tmpNode == this.initialNode) {
           this.initialNode = null;
-          this.lastNode = null;
+          this.finalNode = null;
         } else {
           previousNode.next = null;
-          this.lastNode = previousNode;
+          this.finalNode = previousNode;
         }
       }
 
@@ -46,11 +46,11 @@ class SinglyLinkedList {
   }
 
   public void unshift(int number) {
-    if (this.initialNode == null && this.lastNode == null) {
-      this.lastNode = new SinglyLinkedListNode();
-      this.initialNode = this.lastNode;
+    if (this.initialNode == null && this.finalNode == null) {
+      this.finalNode = new SinglyLinkedListNode();
+      this.initialNode = this.finalNode;
 
-      this.lastNode.number = number;
+      this.finalNode.number = number;
     } else {
       SinglyLinkedListNode newNode = new SinglyLinkedListNode();
       newNode.number = number;
