@@ -135,8 +135,8 @@ public class Menu {
           }
         case 4:
           {
-            // doublyLinkedList.shift();
-            // System.out.println("Element shifted.");
+            doublyLinkedList.shift();
+            System.out.println("Element shifted.");
             break;
           }
         case 5:

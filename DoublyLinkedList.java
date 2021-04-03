@@ -48,6 +48,16 @@ class DoublyLinkedList {
     }
   }
 
+  public void shift() {
+    if (this.initialNode == this.finalNode) {
+      this.initialNode = null;
+      this.finalNode = null;
+    } else if (this.initialNode.next != null) {
+      this.initialNode = this.initialNode.next;
+      this.initialNode.previous = null;
+    }
+  }
+
   public void list() {
     DoublyLinkedListNode tmp = this.initialNode;
 
