@@ -75,6 +75,6 @@ class Main {
       }
 
       System.out.print("\n\n\n");
-    } while (option != 5);
+    } while (option != 8);
   }
 }
