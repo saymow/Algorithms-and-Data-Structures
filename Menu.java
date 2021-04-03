@@ -154,8 +154,8 @@ public class Menu {
           }
         case 7:
           {
-            // System.out.print("Type a number: ");
-            // System.out.println((doublyLinkedList.includes(Integer.parseInt(console.nextLine())) ? "yep" : "no"));
+            System.out.print("Type a number: ");
+            System.out.println((doublyLinkedList.includes(Integer.parseInt(console.nextLine())) ? "yep" : "no"));
             break;
           }
         case 8:

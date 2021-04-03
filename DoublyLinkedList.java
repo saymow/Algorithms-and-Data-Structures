@@ -99,4 +99,15 @@ class DoublyLinkedList {
       tmp = tmp.next;
     }
   }
+
+  public boolean includes(int number) {
+    DoublyLinkedListNode tmp = this.initialNode;
+
+    while (tmp != null) {
+      if (tmp.number == number) return true;
+      tmp = tmp.next;
+    }
+
+    return false;
+  }
 }
