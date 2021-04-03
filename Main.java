@@ -10,6 +10,7 @@ class Main {
     do {
       System.out.println("------------Data Structures------------");
       System.out.println("1 - Singly Linked List");
+      System.out.println("2 - Doubly Linked List");
       System.out.println("9 - Exit\n");
       System.out.print("Choose your option: ");
       option = Integer.parseInt(console.nextLine());
@@ -20,6 +21,11 @@ class Main {
         case 1:
           {
             Menu.SinglyLinkedListMenu();
+          }
+          break;
+        case 2:
+          {
+            Menu.DoublyLinkedListMenu();
           }
       }
     } while (option != 9);
