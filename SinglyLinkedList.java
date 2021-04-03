@@ -1,9 +1,11 @@
 class Node {
+
   int number;
   Node next;
 }
 
 class SinglyLinkedList {
+
   Node initialNode;
   Node lastNode;
   Node tmpNode;
@@ -61,6 +63,44 @@ class SinglyLinkedList {
   public void shift() {
     if (this.initialNode != null) {
       this.initialNode = this.initialNode.next;
+    }
+  }
+
+  public void insert(int position, int number) {
+    this.tmpNode = this.initialNode;
+    int currentPos = 0;
+
+    while (this.tmpNode != null) {
+      currentPos++;
+      if (currentPos == position - 1) {
+        Node newNode = new Node();
+        newNode.number = number;
+        newNode.next = this.tmpNode.next;
+
+        this.tmpNode.next = newNode;
+
+        break;
+      } else if (position == 1) {
+        Node newNode = new Node();
+        newNode.number = number;
+        newNode.next = this.tmpNode;
+
+        this.initialNode = newNode;
+
+        break;
+      }
+
+      this.tmpNode = this.tmpNode.next;
+    }
+
+    if (position > 0 && position <= currentPos) {
+      System.out.printf(
+        "%d inserted on position %d successfully.\n",
+        number,
+        position
+      );
+    } else {
+      System.out.printf("Position %d is out of bounds.\n", position);
     }
   }
 

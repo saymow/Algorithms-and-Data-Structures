@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Main {
+
   static Scanner console = new Scanner(System.in);
 
   public static void main(String[] args) {
@@ -14,14 +15,15 @@ class Main {
       System.out.println("2 - Pop a number");
       System.out.println("3 - Unshift a number");
       System.out.println("4 - Shift a number");
-      System.out.println("5 - Remove by value");
-      System.out.println("6 - Check if includes a number");
-      System.out.println("7 - Show all numbers");
-      System.out.println("8 - Exit\n");
+      System.out.println("5 - Insert at given position");
+      System.out.println("6 - Remove by value");
+      System.out.println("7 - Check if includes a number");
+      System.out.println("8 - Show all numbers");
+      System.out.println("9 - Exit\n");
       System.out.print("Chose your option: ");
       option = Integer.parseInt(console.nextLine());
 
-      System.out.print("\n\n");
+      System.out.print("\n");
 
       switch (option) {
         case 1:
@@ -52,9 +54,18 @@ class Main {
           }
         case 5:
           {
+            System.out.print("Type a position: ");
+            int pos = Integer.parseInt(console.nextLine());
+            System.out.print("Type a number: ");
+            int number = Integer.parseInt(console.nextLine());
+            singlyLinkedList.insert(pos, number);
             break;
           }
         case 6:
+          {
+            break;
+          }
+        case 7:
           {
             System.out.print("Type a number: ");
             System.out.println(
@@ -66,7 +77,7 @@ class Main {
             );
             break;
           }
-        case 7:
+        case 8:
           {
             System.out.print("Current elements: ");
             singlyLinkedList.list();
@@ -76,6 +87,6 @@ class Main {
       }
 
       System.out.print("\n\n\n");
-    } while (option != 8);
+    } while (option != 9);
   }
 }
