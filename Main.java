@@ -19,7 +19,8 @@ class Main {
       System.out.println("6 - Remove by value");
       System.out.println("7 - Check if includes a number");
       System.out.println("8 - Show all numbers");
-      System.out.println("9 - Exit\n");
+      System.out.println("9 - Clear list");
+      System.out.println("10 - Exit\n");
       System.out.print("Chose your option: ");
       option = Integer.parseInt(console.nextLine());
 
@@ -83,10 +84,15 @@ class Main {
             singlyLinkedList.list();
             break;
           }
+        case 9:
+          {
+            System.out.println("Elements cleared.");
+            singlyLinkedList.clear();
+          }
         default:
       }
 
-      System.out.print("\n\n\n");
-    } while (option != 9);
+      System.out.print("\n\n");
+    } while (option != 10);
   }
 }

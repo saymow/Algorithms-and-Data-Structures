@@ -113,6 +113,10 @@ class SinglyLinkedList {
     }
   }
 
+  public void clear() {
+    this.initialNode = null;
+  }
+
   public boolean includes(int number) {
     this.tmpNode = this.initialNode;
 
