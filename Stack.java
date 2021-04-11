@@ -20,6 +20,12 @@ public class Stack {
     }
   }
 
+  public void pop() {
+    if (this.head != null) {
+      this.head = this.head.next;
+    }
+  }
+
   public void show() {
     StackNode tmpNode = this.head;
 

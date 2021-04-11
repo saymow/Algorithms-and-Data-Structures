@@ -206,11 +206,16 @@ public class Menu {
             break;
           }
         case 2:
-          {}
+          {
+            stack.pop();
+            System.out.println("Element popped.");
+            break;
+          }
         case 3:
           {
             System.out.print("Current elements: ");
             stack.show();
+            break;
           }
         case 4:
           {}
