@@ -25,6 +25,18 @@ public class Queue {
     }
   }
 
+  public void dequeue() {
+    if (this.front != null) {
+      if (this.front.previous != null) {
+        this.front.previous.next = null;
+        this.front = this.front.previous;
+      } else {
+        this.front = null;
+        this.back = null;
+      }
+    }
+  }
+
   public void show() {
     QueueNode tmpNode = this.back;
 

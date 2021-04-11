@@ -255,7 +255,11 @@ public class Menu {
             break;
           }
         case 2:
-          {}
+          {
+            queue.dequeue();
+            System.out.println("Element dequeued");
+            break;
+          }
         case 3:
           {
             System.out.print("Current elements: ");
