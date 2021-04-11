@@ -12,6 +12,7 @@ class Main {
       System.out.println("1 - Singly Linked List");
       System.out.println("2 - Doubly Linked List");
       System.out.println("3 - Stack");
+      System.out.println("4 - Queue");
       System.out.println("9 - Exit\n");
       System.out.print("Choose your option: ");
       option = Integer.parseInt(console.nextLine());
@@ -32,6 +33,11 @@ class Main {
         case 3:
           {
             Menu.StackMenu();
+            break;
+          }
+        case 4:
+          {
+            Menu.Queue();
             break;
           }
       }

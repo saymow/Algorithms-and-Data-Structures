@@ -190,7 +190,7 @@ public class Menu {
       System.out.println("1 - Push a number");
       System.out.println("2 - Pop a number");
       System.out.println("3 - Show all numbers");
-      System.out.println("4 - Clear list");
+      System.out.println("4 - Clear stack");
       System.out.println("5 - Exit\n");
       System.out.print("Chose your option: ");
       option = Integer.parseInt(console.nextLine());
@@ -222,6 +222,44 @@ public class Menu {
             System.out.println("Stack cleared.");
             stack.clear();
           }
+        default:
+      }
+
+      System.out.print("\n\n");
+    } while (option != 5);
+  }
+
+  public static void Queue() {
+    Queue queue = new Queue();
+    int option;
+
+    System.out.println("------------Queue----------------");
+    System.out.println("Options:");
+    do {
+      System.out.println("1 - Enqueue a number");
+      System.out.println("2 - Dequeue a number");
+      System.out.println("3 - Show all numbers");
+      System.out.println("4 - Clear queue");
+      System.out.println("5 - Exit\n");
+      System.out.print("Chose your option: ");
+      option = Integer.parseInt(console.nextLine());
+
+      System.out.print("\n");
+
+      switch (option) {
+        case 1:
+          {
+            System.out.print("Type a number: ");
+            queue.enqueue(Integer.parseInt(console.nextLine()));
+            System.out.println("Element queued.");
+            break;
+          }
+        case 2:
+          {}
+        case 3:
+          {}
+        case 4:
+          {}
         default:
       }
 
