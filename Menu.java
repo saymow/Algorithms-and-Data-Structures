@@ -208,7 +208,10 @@ public class Menu {
         case 2:
           {}
         case 3:
-          {}
+          {
+            System.out.print("Current elements: ");
+            stack.show();
+          }
         case 4:
           {}
         default:

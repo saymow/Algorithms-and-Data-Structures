@@ -19,4 +19,13 @@ public class Stack {
       this.head = stackNode;
     }
   }
+
+  public void show() {
+    StackNode tmpNode = this.head;
+
+    while (tmpNode != null) {
+      System.out.printf("%d   ", tmpNode.number);
+      tmpNode = tmpNode.next;
+    }
+  }
 }
