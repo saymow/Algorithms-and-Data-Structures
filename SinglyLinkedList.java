@@ -123,4 +123,29 @@ class SinglyLinkedList {
 
     return false;
   }
+
+  public boolean removeByValue(int number) {
+    SinglyLinkedListNode tmpNode = this.initialNode;
+    SinglyLinkedListNode previousTmpNode = this.initialNode;
+
+    while (tmpNode != null) {
+      if (tmpNode.number == number) {
+        if (tmpNode == this.initialNode) {
+          this.initialNode = tmpNode.next;
+        } else if (tmpNode == this.finalNode) {
+          previousTmpNode.next = null;
+          this.finalNode = previousTmpNode;
+        } else {
+          previousTmpNode.next = tmpNode.next;
+        }
+
+        return true;
+      }
+
+      previousTmpNode = tmpNode;
+      tmpNode = tmpNode.next;
+    }
+
+    return false;
+  }
 }

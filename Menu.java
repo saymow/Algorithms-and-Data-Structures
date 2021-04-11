@@ -64,6 +64,8 @@ public class Menu {
           }
         case 6:
           {
+            System.out.print("Type a number: ");
+            System.out.println(singlyLinkedList.removeByValue(Integer.parseInt(console.nextLine())) ? "removed" : "couldn't find item.");
             break;
           }
         case 7:
