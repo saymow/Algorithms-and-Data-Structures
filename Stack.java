@@ -34,4 +34,8 @@ public class Stack {
       tmpNode = tmpNode.next;
     }
   }
+
+  public void clear() {
+    this.head = null;
+  }
 }

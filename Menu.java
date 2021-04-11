@@ -218,7 +218,10 @@ public class Menu {
             break;
           }
         case 4:
-          {}
+          {
+            System.out.println("Stack cleared.");
+            stack.clear();
+          }
         default:
       }
 
