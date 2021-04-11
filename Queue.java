@@ -24,4 +24,15 @@ public class Queue {
       this.back = queueNode;
     }
   }
+
+  public void show() {
+    QueueNode tmpNode = this.back;
+
+    System.out.print("BACK    ");
+    while (tmpNode != null) {
+      System.out.printf("%d    ", tmpNode.number);
+      tmpNode = tmpNode.next;
+    }
+    System.out.print("FRONT");
+  }
 }
