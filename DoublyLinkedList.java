@@ -115,4 +115,29 @@ class DoublyLinkedList {
 
     return false;
   }
+
+  public boolean removeByValue(int number) {
+    DoublyLinkedListNode tmpNode = this.initialNode;
+
+    while (tmpNode != null) {
+      if (tmpNode.number == number) {
+        if (tmpNode == this.initialNode) {
+          this.initialNode.previous = null;
+          this.initialNode = tmpNode.next;
+        } else if (tmpNode == this.finalNode) {
+          tmpNode.previous.next = null;
+          this.finalNode = tmpNode.previous;
+        } else {
+          tmpNode.previous.next = tmpNode.next;
+          tmpNode.next.previous = tmpNode.previous;
+        }
+
+        return true;
+      }
+
+      tmpNode = tmpNode.next;
+    }
+
+    return false;
+  }
 }
