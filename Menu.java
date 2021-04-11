@@ -179,4 +179,42 @@ public class Menu {
       System.out.print("\n\n");
     } while (option != 10);
   }
+
+  public static void StackMenu() {
+    Stack stack = new Stack();
+    int option;
+
+    System.out.println("------------Stack----------------");
+    System.out.println("Options:");
+    do {
+      System.out.println("1 - Push a number");
+      System.out.println("2 - Pop a number");
+      System.out.println("3 - Show all numbers");
+      System.out.println("4 - Clear list");
+      System.out.println("5 - Exit\n");
+      System.out.print("Chose your option: ");
+      option = Integer.parseInt(console.nextLine());
+
+      System.out.print("\n");
+
+      switch (option) {
+        case 1:
+          {
+            System.out.print("Type a number: ");
+            stack.push(Integer.parseInt(console.nextLine()));
+            System.out.println("Element pushed.");
+            break;
+          }
+        case 2:
+          {}
+        case 3:
+          {}
+        case 4:
+          {}
+        default:
+      }
+
+      System.out.print("\n\n");
+    } while (option != 5);
+  }
 }
