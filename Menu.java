@@ -267,7 +267,10 @@ public class Menu {
             break;
           }
         case 4:
-          {}
+          {
+            System.out.println("Queue cleared.");
+            queue.clear();
+          }
         default:
       }
 

@@ -47,4 +47,9 @@ public class Queue {
     }
     System.out.print("FRONT");
   }
+
+  public void clear() {
+    this.front = null;
+    this.back = null;
+  }
 }
