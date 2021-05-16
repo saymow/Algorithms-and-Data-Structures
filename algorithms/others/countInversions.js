@@ -1,3 +1,5 @@
+import { readFile } from "fs";
+
 const _countInversion = (args) => {
   let [arr, count] = args;
   if (arr.length === 1) return args;
@@ -39,3 +41,12 @@ const countInversion = (arr) => {
 console.log(countInversion([1, 6, 4, 3, 7]) === 3);
 console.log(countInversion([8, 4, 2, 1]) === 6);
 console.log(countInversion([3, 5, 1, 4, 3]) === 5);
+
+readFile("./countInversionsSample.txt", "utf8", (err, file) => {
+  if (err) {
+    throw Error("Could not read file: " + err);
+  }
+  const dataSet = file.split("\n").map((strNum) => parseInt(strNum, 10));
+
+  console.log(countInversion(dataSet));
+});
