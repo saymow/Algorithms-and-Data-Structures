@@ -6,15 +6,14 @@ const algorithms = Object.keys(Algorithms).map((name) => ({
   algorithm: Algorithms[name],
 }));
 
-const genArray = (size) =>
-  new Array(size).fill().map(() => Math.round(Math.random() * 1000));
+const genArray = (size) => new Array(size).fill().map(() => Math.round(Math.random() * 1000));
 
 const idealAlgorithm = (arr) => [...arr].sort((a, b) => a - b);
 
 const timeTests = (algorithm) => {
-  const largeArray = genArray(1000);
-  const mediumArray = genArray(100);
-  const shortArray = genArray(10);
+  const largeArray = genArray(100000);
+  const mediumArray = genArray(10000);
+  const shortArray = genArray(100);
 
   console.time("largeArrayIdeal".bgWhite.black);
   idealAlgorithm(largeArray);
