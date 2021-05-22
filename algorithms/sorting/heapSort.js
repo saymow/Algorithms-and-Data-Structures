@@ -20,7 +20,7 @@ const heapify = (arr, i, n) => {
   if (largestIndex !== i) {
     swap(arr, i, largestIndex);
 
-    heapify(arr, i, largestIndex);
+    heapify(arr, largestIndex, n);
   }
 };
 
