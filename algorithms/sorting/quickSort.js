@@ -1,7 +1,3 @@
-import { readFile } from "fs";
-
-let total = 0;
-
 const swap = (arr, a, b) => {
   const tmp = arr[a];
   arr[a] = arr[b];
@@ -39,8 +35,6 @@ const getPivotPerMedian = (arr, l, r) => {
 const _quickSort = (arr, l, r) => {
   if (l >= r) return arr;
 
-  total += arr.slice(l, r + 1).length - 1;
-
   const medianPivot = getPivotPerMedian(arr, l, r);
 
   swap(arr, l, medianPivot);
@@ -57,12 +51,3 @@ export default function quickSort(arr) {
   return _quickSort(arr, 0, arr.length - 1);
 }
 
-readFile("./sample.txt", "utf-8", (err, data) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  const arr = data.split("\n").map((strNum) => parseInt(strNum, 10));
-
-  quickSort(arr);
-});
